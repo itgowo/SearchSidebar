@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="contacts">
+        <item>/</item>
+        <item>!</item>
+        <item>*/*-</item>
+        <item>aaa</item>
+        <item>111</item>
+        <item>222</item>
+        <!--<item>e</item>-->
+        <!--<item>f</item>-->
+        <!--<item>g</item>-->
+        <!--<item>h</item>-->
+        <!--<item>i</item>-->
+        <!--<item>j</item>-->
+        <!--<item>k</item>-->
+        <!--<item>l</item>-->
+        <!--<item>m</item>-->
+        <!--<item>n</item>-->
+        <!--<item>o</item>-->
+        <!--<item>p</item>-->
+        <!--<item>q</item>-->
+        <!--<item>r</item>-->
+        <!--<item>s</item>-->
+        <!--<item>t</item>-->
+        <!--<item>u</item>-->
+        <!--<item>v</item>-->
+        <!--<item>w</item>-->
+        <!--<item>x</item>-->
+        <!--<item>y</item>-->
+        <!--<item>z</item>-->
+        <item>毛泽东</item>
+        <item>周恩来</item>
+        <item>孙中山</item>
+        <item>刘少奇</item>
+        <item>邓小平</item>
+        <item>宋庆龄</item>
+        <item>邓稼先</item>
+        <item>陈景润</item>
+        <item>黄子卿</item>
+        <item>李四光</item>
+        <item>马大猷</item>
+        <item>茅以升</item>
+        <item>钱学森</item>
+        <item>卢永根</item>
+        <item>华罗庚</item>
+        <item>郭沫若</item>
+        <item>鲁迅</item>
+        <item>李大钊</item>
+        <item>彭德怀</item>
+        <item>朱德</item>
+        <item>恽代英</item>
+        <item>瞿秋白</item>
+        <item>江泽民</item>
+        <item>张太雷</item>
+        <item>秋瑾</item>
+        <item>袁隆平</item>
+        <item>李小龙</item>
+        <item>成龙</item>
+        <item>李连杰</item>
+        <item>刘德华</item>
+        <item>周杰伦</item>
+        <item>张学友</item>
+        <item>姚明</item>
+        <item>刘翔</item>
+        <item>李嘉诚</item>
+        <item>何鸿燊</item>
+        <item>于丹</item>
+        <item>李政道</item>
+        <item>杨振宁</item>
+    </string-array>
+
+</resources>
