@@ -1,4 +1,4 @@
-package com.lujianchao.SearchSideBar.view;
+package com.lujianchao.SearchSideBar.SearchSidebar;
 
 import android.content.Context;
 import android.text.Editable;
@@ -12,11 +12,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.lujianchao.SearchSideBar.R;
-import com.lujianchao.SearchSideBar.view.Member;
-import com.lujianchao.SearchSideBar.view.PinyinUtils;
-import com.lujianchao.SearchSideBar.view.SearchEditText;
-import com.lujianchao.SearchSideBar.view.SideBar;
-import com.lujianchao.SearchSideBar.view.SortAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,6 +20,7 @@ import java.util.List;
 
 /**
  * Created by Lu JianChao on 2016/6/29.
+ * https://github.com/hnsugar
  */
 public class SearchSideBar extends LinearLayout {
     private ListView sortListView;
@@ -35,7 +31,6 @@ public class SearchSideBar extends LinearLayout {
     private SearchEditText mEtSearchName;
     private List<ContactSortModel> SourceDateList;
     private onItemClickListener mOnItemClickListener;
-    private List<Member> mMembers = new ArrayList<>();
 
     public SearchSideBar(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -43,8 +38,8 @@ public class SearchSideBar extends LinearLayout {
         addView(View.inflate(context, R.layout.listviewsortbarfilter, null));
     }
 
-    public void setMembers(List<Member> mMembers, onItemClickListener mListener) {
-        this.mMembers = mMembers;
+    public void setMembers(List<ContactSortModel> mMembers, onItemClickListener mListener) {
+        this.SourceDateList = mMembers;
         this.mOnItemClickListener = mListener;
         initViews();
     }
@@ -61,7 +56,7 @@ public class SearchSideBar extends LinearLayout {
 
     private void setAdapter() {
 
-        SourceDateList = filledData(mMembers);
+        filledData(SourceDateList);
         Collections.sort(SourceDateList, new PinyinComparator());
         adapter = new SortAdapter(mContext, SourceDateList);
         sortListView.setAdapter(adapter);
@@ -138,19 +133,20 @@ public class SearchSideBar extends LinearLayout {
         adapter.updateListView(mSortList);
     }
 
-    private List<ContactSortModel> filledData(List<Member> mMembers) {
-        List<ContactSortModel> mSortList = new ArrayList<>();
+    /**
+     * 计算出首字母
+     * @param mMembers
+     * @return
+     */
+    private List<ContactSortModel> filledData(List<ContactSortModel> mMembers) {
+        List<ContactSortModel> mSortList = mMembers;
         ArrayList<String> indexString = new ArrayList<>();
 
-        for (int i = 0; i < mMembers.size(); i++) {
-            ContactSortModel sortModel = new ContactSortModel();
-            sortModel.setName(mMembers.get(i).getData().getDispName());
-            sortModel.setID(mMembers.get(i).getData().getMemberID());
-            sortModel.setLogo(mMembers.get(i).getData().getLogo());
-            String pinyin = PinyinUtils.getPingYin(sortModel.getName());
+        for (int i = 0; i < mSortList.size(); i++) {
+            String pinyin = PinyinUtils.getPingYin(mSortList.get(i).getName());
             String sortString = pinyin.substring(0, 1).toUpperCase();
             if (sortString.matches("[A-Z]")) {
-                sortModel.setSortLetters(sortString.toUpperCase());
+                mSortList.get(i).setSortLetters(sortString.toUpperCase());
                 if (!indexString.contains(sortString)) {
                     indexString.add(sortString);
                 }
@@ -159,7 +155,7 @@ public class SearchSideBar extends LinearLayout {
                     indexString.add("#");
                 }
             }
-            mSortList.add(sortModel);
+
         }
         Collections.sort(indexString);
         sideBar.setIndexText(indexString);
@@ -187,12 +183,21 @@ public class SearchSideBar extends LinearLayout {
     }
 
 
-    public class ContactSortModel {
+    public static class ContactSortModel {
 
         private String name;//显示的数据
         private String ID;
         private String Logo;
         private String sortLetters = "#";//显示数据拼音的首字母
+        private String tag;
+
+        public String getTag() {
+            return tag;
+        }
+
+        public void setTag(String mTag) {
+            tag = mTag;
+        }
 
         public String getName() {
             return name;

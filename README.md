@@ -5,7 +5,7 @@
 联系人列表  导航bar  搜索
 ~~~~
 
-
+QQ：1264957104
 
 
 
@@ -35,18 +35,17 @@
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
-        mSortBarFilter= (SearchSideBar) findViewById(R.id.lv_contact);
+        mSortBarFilter = (SearchSideBar) findViewById(R.id.lv_contact);
         String[] mStrings = getResources().getStringArray(R.array.contacts);
-        Uri uri =  Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
+        Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
                 + getResources().getResourcePackageName(R.mipmap.ic_launcher) + "/"
                 + getResources().getResourceTypeName(R.mipmap.ic_launcher) + "/"
                 + getResources().getResourceEntryName(R.mipmap.ic_launcher));
         for (int i = 0; i < mStrings.length; i++) {
-            Member mMember = new Member();
-            mMember.setData(new Member.DataEntity());
-            mMember.getData().setMemberID("aaaaaaa" + i);
-            mMember.getData().setDispName(mStrings[i]);
-            mMember.getData().setLogo(uri.toString());
+            SearchSideBar.ContactSortModel mMember = new SearchSideBar.ContactSortModel();
+            mMember.setID("aaaaaaa" + i);
+            mMember.setName(mStrings[i]);
+            mMember.setLogo(uri.toString());
             mMembers.add(mMember);
         }
         mSortBarFilter.setMembers(mMembers, new SearchSideBar.onItemClickListener() {

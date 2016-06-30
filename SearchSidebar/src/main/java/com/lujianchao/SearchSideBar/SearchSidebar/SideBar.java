@@ -1,4 +1,4 @@
-package com.lujianchao.SearchSideBar.view;
+package com.lujianchao.SearchSideBar.SearchSidebar;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,7 +1,8 @@
-package com.lujianchao.SearchSideBar.view;
+package com.lujianchao.SearchSideBar.SearchSidebar;
 
 /**
  * Created by Lu JianChao on 2016/6/29.
+ * https://github.com/hnsugar
  */
 
 import android.content.Context;
