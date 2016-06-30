@@ -1,35 +1,35 @@
 # SearchSidebar
 
-## Ò»£º¹Ø¼ü´Ê£º
+## ä¸€ï¼šå…³é”®è¯ï¼š
 ~~~~
-ÁªÏµÈËÁĞ±í  µ¼º½bar  ËÑË÷
+è”ç³»äººåˆ—è¡¨  å¯¼èˆªbar  æœç´¢
 ~~~~
 
+QQï¼š1264957104
 
 
 
-
-## ¶ş£ºËµÃ÷
-    µ¼º½barÓĞºÜ¶àÁË£¬ÎÒ¿´ÁË±ğÈËµÄÓĞÒ»Ğ©²»Âú×ãĞèÇó£¬ÓÚÊÇ¸ÄÁË¸Ä£º
-    1.Ôö¼ÓÁË¶ÔÊı×ÖºÍÌØÊâ·ûºÅµÄ´¦Àí£¬°´#´¦ÀíÁË¡£
-    2.Õë¶Ôµ¼º½×ÖÄ¸ÊıÁ¿²»Í¬×öÁË´¦Àí¡£
-    3.×ö³ÉÁË×Ô¶¨ÒåView·½Ê½£¬³ä·Ö½âñî£¬Ê¹ÓÃ·½±ã¡£
+## äºŒï¼šè¯´æ˜
+    å¯¼èˆªbaræœ‰å¾ˆå¤šäº†ï¼Œæˆ‘çœ‹äº†åˆ«äººçš„æœ‰ä¸€äº›ä¸æ»¡è¶³éœ€æ±‚ï¼Œäºæ˜¯æ”¹äº†æ”¹ï¼š
+    1.å¢åŠ äº†å¯¹æ•°å­—å’Œç‰¹æ®Šç¬¦å·çš„å¤„ç†ï¼ŒæŒ‰#å¤„ç†äº†ã€‚
+    2.é’ˆå¯¹å¯¼èˆªå­—æ¯æ•°é‡ä¸åŒåšäº†å¤„ç†ã€‚
+    3.åšæˆäº†è‡ªå®šä¹‰Viewæ–¹å¼ï¼Œå……åˆ†è§£è€¦ï¼Œä½¿ç”¨æ–¹ä¾¿ã€‚
     
-    ºËĞÄ´úÂë·½·¨£º mSortBarFilter.setMembers(mMembers, new SearchSideBar.onItemClickListener()
+    æ ¸å¿ƒä»£ç æ–¹æ³•ï¼š mSortBarFilter.setMembers(mMembers, new SearchSideBar.onItemClickListener()
     
-## Ê¾Àı
+## ç¤ºä¾‹
 ![ image](https://github.com/hnsugar/SearchSidebar/blob/master/SearchSidebar.gif)
 
  
 
-##  ²¼¾Ö
+##  å¸ƒå±€
 
     <com.lujianchao.SearchSideBar.view.SearchSideBar
         android:id="@+id/lv_contact"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></com.lujianchao.SearchSideBar.view.SearchSideBar>
         
-##  ´úÂë
+##  ä»£ç 
 
  
     protected void onCreate(Bundle savedInstanceState) {
