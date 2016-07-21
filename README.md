@@ -15,6 +15,7 @@ QQ：1264957104
     2.针对导航字母数量不同做了处理。当数量少时，间距较大方便点击，数量越多间距越小。
     3.做成了自定义View方式，充分解耦，使用方便。
     
+    如果直接导入会出错，把布局文件listviewsortbarfilter.xml里自定义view重新写一下路径和名字就可以了，clean项目，一般没问题了。
     核心代码方法： mSortBarFilter.setMembers(mMembers, new SearchSideBar.onItemClickListener()
     
 ## 示例
